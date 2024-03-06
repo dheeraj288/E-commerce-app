@@ -77,4 +77,3 @@ gem "font-awesome-sass", "~> 6.5"
 
 gem "pagy", "~> 7.0"
 
-gem "stripe", "~> 10.11"
