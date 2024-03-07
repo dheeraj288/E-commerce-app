@@ -670,3 +670,82 @@ Processing by Admin::OrdersController#index as HTML
 Completed 200 OK in 17ms (Views: 9.7ms | ActiveRecord: 1.6ms | Allocations: 12405)
 
 
+Started GET "/admin/categories" for ::1 at 2024-03-07 09:25:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/categories/index.html.erb within layouts/admin
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/categories/index.html.erb:29
+  Rendered admin/categories/index.html.erb within layouts/admin (Duration: 3.2ms | Allocations: 1053)
+  Rendered layout layouts/admin.html.erb (Duration: 142.1ms | Allocations: 85671)
+Completed 200 OK in 244ms (Views: 143.5ms | ActiveRecord: 17.4ms | Allocations: 113954)
+
+
+Started GET "/admin" for ::1 at 2024-03-07 09:25:20 +0530
+Processing by AdminController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."fulfilled" = $1 ORDER BY "orders"."created_at" DESC LIMIT $2[0m  [["fulfilled", false], ["LIMIT", 5]]
+  ↳ app/controllers/admin_controller.rb:6:in `index'
+  [1m[36mOrder Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."created_at" BETWEEN $1 AND $2[0m  [["created_at", "2024-03-06 18:30:00"], ["created_at", "2024-03-07 03:55:20.597738"]]
+  ↳ app/controllers/admin_controller.rb:8:in `index'
+  [1m[36mOrder Sum (0.3ms)[0m  [1m[34mSELECT SUM("orders"."total") FROM "orders" WHERE "orders"."created_at" BETWEEN $1 AND $2[0m  [["created_at", "2024-03-06 18:30:00"], ["created_at", "2024-03-07 03:55:20.600730"]]
+  ↳ app/controllers/admin_controller.rb:9:in `index'
+  [1m[36mOrder Average (0.3ms)[0m  [1m[34mSELECT AVG("orders"."total") FROM "orders" WHERE "orders"."created_at" BETWEEN $1 AND $2[0m  [["created_at", "2024-03-06 18:30:00"], ["created_at", "2024-03-07 03:55:20.603169"]]
+  ↳ app/controllers/admin_controller.rb:10:in `index'
+  [1m[36mOrderProduct Average (0.8ms)[0m  [1m[34mSELECT AVG("order_products"."quantity") FROM "order_products" INNER JOIN "orders" ON "orders"."id" = "order_products"."order_id" WHERE "orders"."created_at" BETWEEN $1 AND $2[0m  [["created_at", "2024-03-06 18:30:00"], ["created_at", "2024-03-07 03:55:20.608666"]]
+  ↳ app/controllers/admin_controller.rb:11:in `index'
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE (created_at > '2024-02-29 03:55:20.623048') ORDER BY "orders"."created_at" ASC[0m
+  ↳ app/controllers/admin_controller.rb:14:in `group_by'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/index.html.erb within layouts/admin
+  Rendered admin/index.html.erb within layouts/admin (Duration: 1.3ms | Allocations: 393)
+  Rendered layout layouts/admin.html.erb (Duration: 11.0ms | Allocations: 9119)
+Completed 200 OK in 51ms (Views: 11.6ms | ActiveRecord: 12.1ms | Allocations: 19342)
+
+
+Started GET "/admin/products" for ::1 at 2024-03-07 09:25:22 +0530
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/admin/products_controller.rb:9:in `index'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/products/index.html.erb within layouts/admin
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/admin/products/index.html.erb:42
+  Rendered admin/products/index.html.erb within layouts/admin (Duration: 3.1ms | Allocations: 1945)
+  Rendered layout layouts/admin.html.erb (Duration: 10.3ms | Allocations: 10534)
+Completed 200 OK in 22ms (Views: 10.7ms | ActiveRecord: 2.8ms | Allocations: 15632)
+
+
+Started GET "/admin/categories" for ::1 at 2024-03-07 09:25:23 +0530
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/categories/index.html.erb within layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/categories/index.html.erb:29
+  Rendered admin/categories/index.html.erb within layouts/admin (Duration: 1.6ms | Allocations: 434)
+  Rendered layout layouts/admin.html.erb (Duration: 16.7ms | Allocations: 9157)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 0.6ms | Allocations: 11074)
+
+
+Started GET "/admin/orders" for ::1 at 2024-03-07 09:25:24 +0530
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."fulfilled" = $1[0m  [["fulfilled", false]]
+  ↳ app/controllers/admin/orders_controller.rb:6:in `index'
+  [1m[36mOrder Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."fulfilled" = $1[0m  [["fulfilled", true]]
+  ↳ app/controllers/admin/orders_controller.rb:7:in `index'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/orders/index.html.erb within layouts/admin
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."fulfilled" = $1 ORDER BY "orders"."created_at" ASC LIMIT $2 OFFSET $3[0m  [["fulfilled", false], ["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/admin/orders/index.html.erb:34
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."fulfilled" = $1 ORDER BY "orders"."created_at" ASC LIMIT $2 OFFSET $3[0m  [["fulfilled", true], ["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/admin/orders/index.html.erb:81
+  Rendered admin/orders/index.html.erb within layouts/admin (Duration: 4.9ms | Allocations: 1465)
+  Rendered layout layouts/admin.html.erb (Duration: 12.1ms | Allocations: 10194)
+Completed 200 OK in 19ms (Views: 12.4ms | ActiveRecord: 1.6ms | Allocations: 13328)
+
+

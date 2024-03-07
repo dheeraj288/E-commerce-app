@@ -79,7 +79,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
   database: e_commerce_production
   username: e_commerce
   password: <%= ENV["E_COMMERCE_DATABASE_PASSWORD"] %>
