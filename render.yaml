@@ -1,6 +1,6 @@
 databases:
-  - name: E-commerce
-    databaseName: E-commerce
+  - name: mysite
+    databaseName: mysite
     user: mysite
 
 services:

@@ -243,3 +243,9 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 0.8ms | Allocations: 24949)
 
 
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/dheeraj/E-commerce/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/dheeraj/E-commerce/config/environment.rb:5)
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "e_commerce_development" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/dheeraj/E-commerce/config/environment.rb:5)
+  [1m[35m (143.2ms)[0m  [1m[35mCREATE DATABASE "e_commerce_development" ENCODING = 'unicode'[0m
+  [1m[35m (107.7ms)[0m  [1m[35mCREATE DATABASE "e_commerce_test" ENCODING = 'unicode'[0m
