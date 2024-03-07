@@ -30718,3 +30718,129 @@ Processing by CartsController#show as HTML
 Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 9775)
 
 
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/dheeraj/E-commerce/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/dheeraj/E-commerce/config/environment.rb:5)
+Started GET "/" for ::1 at 2024-03-06 17:07:34 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:13
+  Rendered home/index.html.erb within layouts/application (Duration: 49.6ms | Allocations: 30089)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 1146)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 223.9ms | Allocations: 115653)
+Completed 200 OK in 326ms (Views: 223.6ms | ActiveRecord: 4.9ms | Allocations: 130754)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTgsInB1ciI6ImJsb2JfaWQifX0=--69aaeb0fb141ff8215ba960be1a4036e2776f593/boot.jpg" for ::1 at 2024-03-06 17:07:34 +0530
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MjIsInB1ciI6ImJsb2JfaWQifX0=--c48be93dc5325073ebdd0ae9d31d3ec05089f479/jeans1.jpeg" for ::1 at 2024-03-06 17:07:34 +0530
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTgsInB1ciI6ImJsb2JfaWQifX0=--69aaeb0fb141ff8215ba960be1a4036e2776f593", "filename"=>"boot"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: qrpbdvytqrg30xy07l6o5ktl8vyj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJxcnBiZHZ5dHFyZzMweHkwN2w2bzVrdGw4dnlqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiYm9vdC5qcGdcIjsgZmlsZW5hbWUqPVVURi04Jydib290LmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAzLTA2VDExOjQyOjM1LjAxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5c5937f0c0fb7029bb50406b646753fc48731d02/boot.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJxcnBiZHZ5dHFyZzMweHkwN2w2bzVrdGw4dnlqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiYm9vdC5qcGdcIjsgZmlsZW5hbWUqPVVURi04Jydib290LmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAzLTA2VDExOjQyOjM1LjAxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5c5937f0c0fb7029bb50406b646753fc48731d02/boot.jpg
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms | Allocations: 2585)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJxcnBiZHZ5dHFyZzMweHkwN2w2bzVrdGw4dnlqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiYm9vdC5qcGdcIjsgZmlsZW5hbWUqPVVURi04Jydib290LmpwZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAzLTA2VDExOjQyOjM1LjAxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5c5937f0c0fb7029bb50406b646753fc48731d02/boot.jpg" for ::1 at 2024-03-06 17:07:35 +0530
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MjIsInB1ciI6ImJsb2JfaWQifX0=--c48be93dc5325073ebdd0ae9d31d3ec05089f479", "filename"=>"jeans1"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 19s3plkwu1a477021yw48jtxpjo6 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxOXMzcGxrd3UxYTQ3NzAyMXl3NDhqdHhwam82IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamVhbnMxLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydqZWFuczEuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAzLTA2VDExOjQyOjM1LjAyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c614b0c1a18192532a935ddd169b3ebedb7513ca/jeans1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxOXMzcGxrd3UxYTQ3NzAyMXl3NDhqdHhwam82IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamVhbnMxLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydqZWFuczEuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAzLTA2VDExOjQyOjM1LjAyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c614b0c1a18192532a935ddd169b3ebedb7513ca/jeans1.jpeg
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1298)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxOXMzcGxrd3UxYTQ3NzAyMXl3NDhqdHhwam82IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiamVhbnMxLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydqZWFuczEuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAzLTA2VDExOjQyOjM1LjAyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c614b0c1a18192532a935ddd169b3ebedb7513ca/jeans1.jpeg" for ::1 at 2024-03-06 17:07:35 +0530
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"boot"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jeans1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 173)
+
+
+Started GET "/admin" for ::1 at 2024-03-06 17:07:41 +0530
+Processing by AdminController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."fulfilled" = ? ORDER BY "orders"."created_at" DESC LIMIT ?[0m  [["fulfilled", 0], ["LIMIT", 5]]
+  ↳ app/controllers/admin_controller.rb:6:in `index'
+  [1m[36mOrder Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."created_at" BETWEEN ? AND ?[0m  [["created_at", "2024-03-05 18:30:00"], ["created_at", "2024-03-06 11:37:41.288351"]]
+  ↳ app/controllers/admin_controller.rb:8:in `index'
+  [1m[36mOrder Sum (0.1ms)[0m  [1m[34mSELECT SUM("orders"."total") FROM "orders" WHERE "orders"."created_at" BETWEEN ? AND ?[0m  [["created_at", "2024-03-05 18:30:00"], ["created_at", "2024-03-06 11:37:41.291561"]]
+  ↳ app/controllers/admin_controller.rb:9:in `index'
+  [1m[36mOrder Average (0.1ms)[0m  [1m[34mSELECT AVG("orders"."total") FROM "orders" WHERE "orders"."created_at" BETWEEN ? AND ?[0m  [["created_at", "2024-03-05 18:30:00"], ["created_at", "2024-03-06 11:37:41.292629"]]
+  ↳ app/controllers/admin_controller.rb:10:in `index'
+  [1m[36mOrderProduct Average (0.1ms)[0m  [1m[34mSELECT AVG("order_products"."quantity") FROM "order_products" INNER JOIN "orders" ON "orders"."id" = "order_products"."order_id" WHERE "orders"."created_at" BETWEEN ? AND ?[0m  [["created_at", "2024-03-05 18:30:00"], ["created_at", "2024-03-06 11:37:41.295122"]]
+  ↳ app/controllers/admin_controller.rb:11:in `index'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE (created_at > '2024-02-28 11:37:41.299428') ORDER BY "orders"."created_at" ASC[0m
+  ↳ app/controllers/admin_controller.rb:14:in `group_by'
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/index.html.erb within layouts/admin
+  Rendered admin/index.html.erb within layouts/admin (Duration: 1.4ms | Allocations: 679)
+  Rendered layout layouts/admin.html.erb (Duration: 24.1ms | Allocations: 10242)
+Completed 200 OK in 68ms (Views: 25.3ms | ActiveRecord: 2.7ms | Allocations: 33382)
+
+
+Started GET "/admin/categories" for ::1 at 2024-03-06 17:07:42 +0530
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/categories/index.html.erb within layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin/categories/index.html.erb:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/categories/index.html.erb:32
+  Rendered admin/categories/index.html.erb within layouts/admin (Duration: 40.7ms | Allocations: 13814)
+  Rendered layout layouts/admin.html.erb (Duration: 54.4ms | Allocations: 22569)
+Completed 200 OK in 60ms (Views: 53.0ms | ActiveRecord: 2.2ms | Allocations: 24675)
+
+
