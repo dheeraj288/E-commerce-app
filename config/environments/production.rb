@@ -21,7 +21,7 @@ Rails.application.configure do
   # config.require_master_key = true
 
   # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || ENV['RENDER'].present?
+  # config.public_file_server.enabled = false
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -69,9 +69,20 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter = :resque
-  # config.active_job.queue_name_prefix = "ecomm_production"
+  # config.active_job.queue_name_prefix = "learning_management_production"
 
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.default_url_options = { host: "https://learning-management-acjy.onrender.com" }
+
+  config.action_mailer.smtp_settings = { 
+    address: "smtp.resend.com",
+    port: 587,
+    user_name: Rails.application.credentials.dig(:smtp_username),
+    password: Rails.application.credentials.dig(:smtp_password),
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
